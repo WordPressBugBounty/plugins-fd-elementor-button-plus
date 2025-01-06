@@ -4,8 +4,8 @@
  * Description: Additional Styles and Options for elementor Button Widget.
  * Plugin URI: https://flickdevs.com/elementor/elementor-button-plus/
  * Author: FlickDevs
- * Version: 1.3.3
- * Elementor tested up to: 3.19.0
+ * Version: 1.3.4
+ * Elementor tested up to: 3.26.3
  * Author URI: https://www.flickdevs.com/
  *
  * Text Domain: fd-elementor-button-plus
@@ -82,18 +82,18 @@ function fd_ele_btn_plus_widgets_fail_load() {
         }
         $activation_url = wp_nonce_url('plugins.php?action=activate&amp;plugin=' . $plugin . '&amp;plugin_status=all&amp;paged=1&amp;s', 'activate-plugin_' . $plugin);
 
-        $admin_notice = '<p>' . __('<strong>Elementor Button Plus</strong> not working because you need to activate the Elementor plugin.', 'FD_EBP') . '</p>';
-        $admin_notice .= '<p>' . sprintf('<a href="%s" class="button-primary">%s</a>', $activation_url, __('Activate Elementor Now', 'FD_EBP')) . '</p>';
+        $admin_notice = '<p>' . __('<strong>Elementor Button Plus</strong> not working because you need to activate the Elementor plugin.', 'fd-elementor-button-plus') . '</p>';
+        $admin_notice .= '<p>' . sprintf('<a href="%s" class="button-primary">%s</a>', $activation_url, __('Activate Elementor Now', 'fd-elementor-button-plus')) . '</p>';
     } else {
         if (!current_user_can('install_plugins')) {
             return;
         }
         $install_url = wp_nonce_url(self_admin_url('update.php?action=install-plugin&plugin=elementor'), 'install-plugin_elementor');
 
-        $admin_notice = '<p>' . __('<strong>Elementor Button Plus</strong> not working because you need to install the Elemenor plugin', 'FD_EBP') . '</p>';
-        $admin_notice .= '<p>' . sprintf('<a href="%s" class="button-primary">%s</a>', $install_url, __('Install Elementor Now', 'FD_EBP')) . '</p>';
+        $admin_notice = '<p>' . __('<strong>Elementor Button Plus</strong> not working because you need to install the Elemenor plugin', 'fd-elementor-button-plus') . '</p>';
+        $admin_notice .= '<p>' . sprintf('<a href="%s" class="button-primary">%s</a>', $install_url, __('Install Elementor Now', 'fd-elementor-button-plus')) . '</p>';
     }
-    echo '<div class="error"><p>' . $admin_notice . '</p></div>';
+    echo '<div class="error"><p>' . esc_html($admin_notice) . '</p></div>';
 }
 
 /**
@@ -105,9 +105,9 @@ function fd_btn_plus_elementor_fail_load_out_of_date() {
     }
     $file_path = 'elementor/elementor.php';
     $upgrade_link = wp_nonce_url(self_admin_url('update.php?action=upgrade-plugin&plugin=') . $file_path, 'upgrade-plugin_' . $file_path);
-    $admin_notice = '<p>' . __('<strong>Elementor Button Plus</strong> not working because you are using an old version of Elementor.', 'FD_EBP') . '</p>';
-    $admin_notice .= '<p>' . sprintf('<a href="%s" class="button-primary">%s</a>', $upgrade_link, __('Update Elementor Now', 'FD_EBP')) . '</p>';
-    echo '<div class="error">' . $admin_notice . '</div>';
+    $admin_notice = '<p>' . __('<strong>Elementor Button Plus</strong> not working because you are using an old version of Elementor.', 'fd-elementor-button-plus') . '</p>';
+    $admin_notice .= '<p>' . sprintf('<a href="%s" class="button-primary">%s</a>', $upgrade_link, __('Update Elementor Now', 'fd-elementor-button-plus')) . '</p>';
+    echo '<div class="error">' . esc_html($admin_notice) . '</div>';
 }
 
 if (!function_exists('_is_elementor_installed')) {
@@ -133,7 +133,7 @@ add_action('admin_notices','fd_btn_plus_user_review');
 function fd_btn_plus_user_review() {
     if ($notices = get_option('button_plus_deferred_admin_notices')) {
         foreach ($notices as $notice) {
-            echo "<div class='notice notice-success is-dismissible'><p>$notice</p></div>";
+            echo "<div class='notice notice-success is-dismissible'><p>" . esc_html($notice) . "</p></div>";
         }
         delete_option('button_plus_deferred_admin_notices');
     }

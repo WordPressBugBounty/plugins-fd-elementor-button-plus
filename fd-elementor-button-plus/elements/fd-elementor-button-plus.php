@@ -12,7 +12,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
     }
 
     public function get_title() {   //Function for get the name of the element.
-        return __('Elementor Button Plus', FD_EBP);
+        return __('Elementor Button Plus', 'fd-elementor-button-plus');
     }
 
     public function get_icon() {   //Function for get the icon of the element.
@@ -29,21 +29,21 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
 
     public static function get_button1_sizes() {  //define sizes of button1.
         return [
-            'xs' => __('Extra Small', FD_EBP),
-            'sm' => __('Small', FD_EBP),
-            'md' => __('Medium', FD_EBP),
-            'lg' => __('Large', FD_EBP),
-            'xl' => __('Extra Large', FD_EBP),
+            'xs' => __('Extra Small', 'fd-elementor-button-plus'),
+            'sm' => __('Small', 'fd-elementor-button-plus'),
+            'md' => __('Medium', 'fd-elementor-button-plus'),
+            'lg' => __('Large', 'fd-elementor-button-plus'),
+            'xl' => __('Extra Large', 'fd-elementor-button-plus'),
         ];
     }
 
     public static function get_button2_sizes() {  //define sizes of button2.
         return [
-            'xs' => __('Extra Small', FD_EBP),
-            'sm' => __('Small', FD_EBP),
-            'md' => __('Medium', FD_EBP),
-            'lg' => __('Large', FD_EBP),
-            'xl' => __('Extra Large', FD_EBP),
+            'xs' => __('Extra Small', 'fd-elementor-button-plus'),
+            'sm' => __('Small', 'fd-elementor-button-plus'),
+            'md' => __('Medium', 'fd-elementor-button-plus'),
+            'lg' => __('Large', 'fd-elementor-button-plus'),
+            'xl' => __('Extra Large', 'fd-elementor-button-plus'),
         ];
     }
 
@@ -51,19 +51,19 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->start_controls_section(//Add controls to for Select options.
             'section_fd_adv_opt', 
 			[
-               'label' => __('Button Types', FD_EBP),
+               'label' => __('Button Types', 'fd-elementor-button-plus'),
             ]
         );
 
         $this->add_control(
             'fd_adv_btn_option', 
 		    [
-				'label' => __('Button Type', FD_EBP),
+				'label' => __('Button Type', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'adv_btn' => __('Single Button', FD_EBP),
-					'dual_button' => __('Dual Button', FD_EBP),
-					'dbwt' => __('Dual Button With Text', FD_EBP),
+					'adv_btn' => __('Single Button', 'fd-elementor-button-plus'),
+					'dual_button' => __('Dual Button', 'fd-elementor-button-plus'),
+					'dbwt' => __('Dual Button With Text', 'fd-elementor-button-plus'),
 				],
 				'default' => 'adv_btn',
             ]
@@ -72,16 +72,16 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add Layout Style control for button1.
             'fd_adv_btn1_layout', 
 			[
-				'label' => __('Style', FD_EBP),
+				'label' => __('Style', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'normal',
 				'options' => [
-					'normal' => __('Normal', FD_EBP),
-					'push' => __('Push Button', FD_EBP),
-					'circle' => __('Circle Button', FD_EBP),
-					'slide' => __('Slide Button', FD_EBP),
-					'swipe' => __('Swipe Button', FD_EBP),
-					'sketch' => __('Sketch Border Buttons', FD_EBP),
+					'normal' => __('Normal', 'fd-elementor-button-plus'),
+					'push' => __('Push Button', 'fd-elementor-button-plus'),
+					'circle' => __('Circle Button', 'fd-elementor-button-plus'),
+					'slide' => __('Slide Button', 'fd-elementor-button-plus'),
+					'swipe' => __('Swipe Button', 'fd-elementor-button-plus'),
+					'sketch' => __('Sketch Border Buttons', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn_option' => 'adv_btn',
@@ -91,14 +91,14 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
 
         $this->add_control(//Add Layout Style control for button1.
             'fd_dual_btn1_layout', [
-				'label' => __('Style', FD_EBP),
+				'label' => __('Style', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'normal',
 				'options' => [
-					'normal' => __('Normal', FD_EBP),
-					'push' => __('Push Button', FD_EBP),
-					'slide' => __('Slide Button', FD_EBP),
-					'swipe' => __('Swipe Button', FD_EBP),
+					'normal' => __('Normal', 'fd-elementor-button-plus'),
+					'push' => __('Push Button', 'fd-elementor-button-plus'),
+					'slide' => __('Slide Button', 'fd-elementor-button-plus'),
+					'swipe' => __('Swipe Button', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn_option!' => 'adv_btn',
@@ -110,25 +110,25 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
 
         $this->start_controls_section(//Add controls to for button1.
             'section_fd_adv_btn1', [
-                'label' => __('Button', FD_EBP),
+                'label' => __('Button', 'fd-elementor-button-plus'),
             ]
         );
 
         $this->add_control(//Add hover style control for normal Style layout.
             'fd_adv_btn1_style_normal',
 			[
-				'label' => __('Hover Style', FD_EBP),
+				'label' => __('Hover Style', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style1',
 				'options' => [
-					'style1' => __('Style1', FD_EBP),
-					'style2' => __('Style2', FD_EBP),
-					'style3' => __('Style3', FD_EBP),
-					'style4' => __('Style4', FD_EBP),
-					'style5' => __('Style5', FD_EBP),
-					'style6' => __('Style6', FD_EBP),
-					'style7' => __('Style7', FD_EBP),
-					'style8' => __('Style8', FD_EBP),
+					'style1' => __('Style1', 'fd-elementor-button-plus'),
+					'style2' => __('Style2', 'fd-elementor-button-plus'),
+					'style3' => __('Style3', 'fd-elementor-button-plus'),
+					'style4' => __('Style4', 'fd-elementor-button-plus'),
+					'style5' => __('Style5', 'fd-elementor-button-plus'),
+					'style6' => __('Style6', 'fd-elementor-button-plus'),
+					'style7' => __('Style7', 'fd-elementor-button-plus'),
+					'style8' => __('Style8', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn_option' => 'adv_btn',
@@ -140,18 +140,18 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add hover style control for normal Style layout.
             'fd_dual_btn1_style_normal',
 			[
-				'label' => __('Hover Style', FD_EBP),
+				'label' => __('Hover Style', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style1',
 				'options' => [
-					'style1' => __('Style1', FD_EBP),
-					'style2' => __('Style2', FD_EBP),
-					'style3' => __('Style3', FD_EBP),
-					'style4' => __('Style4', FD_EBP),
-					'style5' => __('Style5', FD_EBP),
-					'style6' => __('Style6', FD_EBP),
-					'style7' => __('Style7', FD_EBP),
-					'style8' => __('Style8', FD_EBP),
+					'style1' => __('Style1', 'fd-elementor-button-plus'),
+					'style2' => __('Style2', 'fd-elementor-button-plus'),
+					'style3' => __('Style3', 'fd-elementor-button-plus'),
+					'style4' => __('Style4', 'fd-elementor-button-plus'),
+					'style5' => __('Style5', 'fd-elementor-button-plus'),
+					'style6' => __('Style6', 'fd-elementor-button-plus'),
+					'style7' => __('Style7', 'fd-elementor-button-plus'),
+					'style8' => __('Style8', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn_option!' => 'adv_btn',
@@ -163,14 +163,14 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add hover style control for push Style layout.
             'fd_adv_btn1_style_push', 
 			[
-				'label' => __('Hover Style', FD_EBP),
+				'label' => __('Hover Style', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style1',
 				'options' => [
-					'style1' => __('Style1', FD_EBP),
-					'style2' => __('Style2', FD_EBP),
-					'style3' => __('Style3', FD_EBP),
-					'style4' => __('Style4', FD_EBP),
+					'style1' => __('Style1', 'fd-elementor-button-plus'),
+					'style2' => __('Style2', 'fd-elementor-button-plus'),
+					'style3' => __('Style3', 'fd-elementor-button-plus'),
+					'style4' => __('Style4', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn_option' => 'adv_btn',
@@ -181,14 +181,14 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add hover style control for push Style layout.
             'fd_dual_btn1_style_push', 
 			[
-				'label' => __('Hover Style', FD_EBP),
+				'label' => __('Hover Style', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style1',
 				'options' => [
-					'style1' => __('Style1', FD_EBP),
-					'style2' => __('Style2', FD_EBP),
-					'style3' => __('Style3', FD_EBP),
-					'style4' => __('Style4', FD_EBP),
+					'style1' => __('Style1', 'fd-elementor-button-plus'),
+					'style2' => __('Style2', 'fd-elementor-button-plus'),
+					'style3' => __('Style3', 'fd-elementor-button-plus'),
+					'style4' => __('Style4', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn_option!' => 'adv_btn',
@@ -200,14 +200,14 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add hover style control for flat Style layout.
             'fd_adv_btn1_style_circle', 
 			[
-				'label' => __('Hover Style', FD_EBP),
+				'label' => __('Hover Style', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style1',
 				'options' => [
-					'style1' => __('Style1', FD_EBP),
-					'style2' => __('Style2', FD_EBP),
-					'style3' => __('Style3', FD_EBP),
-					'style4' => __('Style4', FD_EBP),
+					'style1' => __('Style1', 'fd-elementor-button-plus'),
+					'style2' => __('Style2', 'fd-elementor-button-plus'),
+					'style3' => __('Style3', 'fd-elementor-button-plus'),
+					'style4' => __('Style4', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn_option' => 'adv_btn',
@@ -219,14 +219,14 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add hover style control for outline Style layout.
             'fd_adv_btn1_style_slide',
 			[
-				'label' => __('Hover Style', FD_EBP),
+				'label' => __('Hover Style', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style1',
 				'options' => [
-					'style1' => __('Style1', FD_EBP),
-					'style2' => __('Style2', FD_EBP),
-					'style3' => __('Style3', FD_EBP),
-					'style4' => __('Style4', FD_EBP),
+					'style1' => __('Style1', 'fd-elementor-button-plus'),
+					'style2' => __('Style2', 'fd-elementor-button-plus'),
+					'style3' => __('Style3', 'fd-elementor-button-plus'),
+					'style4' => __('Style4', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn_option' => 'adv_btn',
@@ -237,14 +237,14 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add hover style control for push Style layout.
             'fd_dual_btn1_style_slide',
 			[
-				'label' => __('Hover Style', FD_EBP),
+				'label' => __('Hover Style', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style1',
 				'options' => [
-					'style1' => __('Style1', FD_EBP),
-					'style2' => __('Style2', FD_EBP),
-					'style3' => __('Style3', FD_EBP),
-					'style4' => __('Style4', FD_EBP),
+					'style1' => __('Style1', 'fd-elementor-button-plus'),
+					'style2' => __('Style2', 'fd-elementor-button-plus'),
+					'style3' => __('Style3', 'fd-elementor-button-plus'),
+					'style4' => __('Style4', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn_option!' => 'adv_btn',
@@ -256,14 +256,14 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add hover style control for 3D Style layout.
             'fd_adv_btn1_style_swipe',
 			[
-				'label' => __('Hover Style', FD_EBP),
+				'label' => __('Hover Style', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style1',
 				'options' => [
-					'style1' => __('Style1', FD_EBP),
-					'style2' => __('Style2', FD_EBP),
-					'style3' => __('Style3', FD_EBP),
-					'style4' => __('Style4', FD_EBP),
+					'style1' => __('Style1', 'fd-elementor-button-plus'),
+					'style2' => __('Style2', 'fd-elementor-button-plus'),
+					'style3' => __('Style3', 'fd-elementor-button-plus'),
+					'style4' => __('Style4', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn_option' => 'adv_btn',
@@ -275,14 +275,14 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add hover style control for push Style layout.
             'fd_dual_btn1_style_swipe', 
 			[
-				'label' => __('Hover Style', FD_EBP),
+				'label' => __('Hover Style', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style1',
 				'options' => [
-					'style1' => __('Style1', FD_EBP),
-					'style2' => __('Style2', FD_EBP),
-					'style3' => __('Style3', FD_EBP),
-					'style4' => __('Style4', FD_EBP),
+					'style1' => __('Style1', 'fd-elementor-button-plus'),
+					'style2' => __('Style2', 'fd-elementor-button-plus'),
+					'style3' => __('Style3', 'fd-elementor-button-plus'),
+					'style4' => __('Style4', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn_option!' => 'adv_btn',
@@ -294,17 +294,17 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control to edit title for button1.
             'fd_adv_btn1_text', 
 			[
-				'label' => __('Text', FD_EBP),
+				'label' => __('Text', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::TEXT,
-				'default' => __('Button1 Text', FD_EBP),
-				'placeholder' => __('Button1 Text', FD_EBP),
+				'default' => __('Button1 Text', 'fd-elementor-button-plus'),
+				'placeholder' => __('Button1 Text', 'fd-elementor-button-plus'),
             ]
         );
 
         $this->add_control(//Add control to set link for button1.
             'fd_adv_btn1_link',
 			[
-				'label' => __('Link', FD_EBP),
+				'label' => __('Link', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::URL,
 				'placeholder' => 'http://your-link.com',
 				'default' => [
@@ -316,12 +316,12 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
 		$this->add_control(			//Add select control for Button1 Link Rel Type.
 			'fd_adv_btn1_link_type',
 			[
-				'label' => __( 'Link Type', 'FD_EAW' ),
+				'label' => __( 'Link Type', 'fd-elementor-button-plus' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'dofollow',
 				'options' => [
-					'dofollow' => __( 'DoFollow', 'FD_EAW' ),
-					'nofollow' => __( 'NoFollow', 'FD_EAW' ),
+					'dofollow' => __( 'DoFollow', 'fd-elementor-button-plus' ),
+					'nofollow' => __( 'NoFollow', 'fd-elementor-button-plus' ),
 				],
 			]
 		);
@@ -329,23 +329,23 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_responsive_control(//Add select control for button alignment.
             'fd_adv_btn1_align',
 			[
-				'label' => __('Alignment', 'elementor'),
+				'label' => __('Alignment', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left' => [
-						'title' => __('Left', 'elementor'),
+						'title' => __('Left', 'fd-elementor-button-plus'),
 						'icon' => 'fa fa-align-left',
 					],
 					'center' => [
-						'title' => __('Center', 'elementor'),
+						'title' => __('Center', 'fd-elementor-button-plus'),
 						'icon' => 'fa fa-align-center',
 					],
 					'right' => [
-						'title' => __('Right', 'elementor'),
+						'title' => __('Right', 'fd-elementor-button-plus'),
 						'icon' => 'fa fa-align-right',
 					],
 					'justify' => [
-						'title' => __('Justified', 'elementor'),
+						'title' => __('Justified', 'fd-elementor-button-plus'),
 						'icon' => 'fa fa-align-justify',
 					],
 				],
@@ -357,7 +357,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control to select button1 size from different sizes.
             'fd_adv_btn1_size', 
 			[
-				'label' => __('Size', FD_EBP),
+				'label' => __('Size', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'sm',
 				'options' => self::get_button1_sizes(),
@@ -367,7 +367,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control to select an icon for button1.
             'fd_adv_btn1_icon',
 			[
-				'label' => __('Icon', FD_EBP),
+				'label' => __('Icon', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
@@ -380,12 +380,12 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control for button1 icon position.
             'fd_adv_btn1_icon_align', 
 			[
-				'label' => __('Icon Position', FD_EBP),
+				'label' => __('Icon Position', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'left',
 				'options' => [
-					'left' => __('Before', FD_EBP),
-					'right' => __('After', FD_EBP),
+					'left' => __('Before', 'fd-elementor-button-plus'),
+					'right' => __('After', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn1_icon!' => '',
@@ -396,7 +396,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control for button1 icon spacing.
             'fd_adv_btn1_icon_indent',
 			[
-				'label' => __('Icon Spacing', FD_EBP),
+				'label' => __('Icon Spacing', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -416,7 +416,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control for button1 icon spacing.
             'fd_dual_btn1_icon_indent',
 			[
-				'label' => __('Icon Spacing', FD_EBP),
+				'label' => __('Icon Spacing', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -437,12 +437,12 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control for add tooltips option for button1.
             'fd_adv_btn1_tooltip',
 			[
-				'label' => __('Tooltip', FD_EBP),
+				'label' => __('Tooltip', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'no',
 				'options' => [
-					'yes' => __('Yes', FD_EBP),
-					'no' => __('No', FD_EBP),
+					'yes' => __('Yes', 'fd-elementor-button-plus'),
+					'no' => __('No', 'fd-elementor-button-plus'),
 				],
             ]
         );
@@ -450,10 +450,10 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control for add tooltips text on button1.
             'fd_btn1_tooltip_text', 
 			[
-				'label' => __('Text', FD_EBP),
+				'label' => __('Text', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::TEXT,
-				'default' => __('Tooltip Text', FD_EBP),
-				'placeholder' => __('Tooltip Text', FD_EBP),
+				'default' => __('Tooltip Text', 'fd-elementor-button-plus'),
+				'placeholder' => __('Tooltip Text', 'fd-elementor-button-plus'),
 				'condition' => [
 					'fd_adv_btn1_tooltip' => 'yes',
 				],
@@ -463,16 +463,16 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control for add tooltips position for button1.
             'fd_btn1_tooltip_position',
 			[
-				'label' => __('Position', FD_EBP),
+				'label' => __('Position', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'top',
 				'options' => [
-					'top' => __('Top', FD_EBP),
-					'top_left' => __('Top Left', FD_EBP),
-					'top_right' => __('Top right', FD_EBP),
-					'bottom' => __('Bottom', FD_EBP),
-					'bottom_left' => __('Bottom Left', FD_EBP),
-					'bottom_right' => __('Bottom Right', FD_EBP),
+					'top' => __('Top', 'fd-elementor-button-plus'),
+					'top_left' => __('Top Left', 'fd-elementor-button-plus'),
+					'top_right' => __('Top right', 'fd-elementor-button-plus'),
+					'bottom' => __('Bottom', 'fd-elementor-button-plus'),
+					'bottom_left' => __('Bottom Left', 'fd-elementor-button-plus'),
+					'bottom_right' => __('Bottom Right', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn1_tooltip' => 'yes',
@@ -485,7 +485,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->start_controls_section( //Start section for Text or Icon section for button1 with text option.
             'section_fd_btn1_text',
 			[
-				'label' => __('Text or Icon', FD_EBP),
+				'label' => __('Text or Icon', 'fd-elementor-button-plus'),
 				'condition' => [
 					'fd_adv_btn_option' => 'dbwt',
 				],
@@ -495,12 +495,12 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//add controls for Text or Icon option for button1.
             'fd_dbwt_btn_option', 
 			[
-				'label' => __('Select Option', FD_EBP),
+				'label' => __('Select Option', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => [
-					'' => __('Text', FD_EBP),
-					'icon' => __('Icon', FD_EBP),
+					'' => __('Text', 'fd-elementor-button-plus'),
+					'icon' => __('Icon', 'fd-elementor-button-plus'),
 				],
             ]
         );
@@ -508,10 +508,10 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//add controls for Title editor of button1.
             'fd_dbwt_btn_text',
 			[
-				'label' => __('Text', FD_EBP),
+				'label' => __('Text', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::TEXT,
-				'default' => __('Or', FD_EBP),
-				'placeholder' => __('Or', FD_EBP),
+				'default' => __('Or', 'fd-elementor-button-plus'),
+				'placeholder' => __('Or', 'fd-elementor-button-plus'),
 				'condition' => [
 					'fd_dbwt_btn_option' => '',
 				],
@@ -521,7 +521,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control Icon section for button2 for text or icon section.
             'fd_dbwt_icon',
 			[
-				'label' => __('Icon', FD_EBP),
+				'label' => __('Icon', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
@@ -540,7 +540,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->start_controls_section(//Start control section with name button2.
             'section_fd_adv_btn2',
 			[
-				'label' => __('Button 2', FD_EBP),
+				'label' => __('Button 2', 'fd-elementor-button-plus'),
 				'condition' => [
 					'fd_adv_btn_option!' => 'adv_btn',
 				],
@@ -550,18 +550,18 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add hover style control for normal Style layout.
             'fd_dual_btn2_style_normal',
 			[
-				'label' => __('Hover Style', FD_EBP),
+				'label' => __('Hover Style', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style1',
 				'options' => [
-					'style1' => __('Style1', FD_EBP),
-					'style2' => __('Style2', FD_EBP),
-					'style3' => __('Style3', FD_EBP),
-					'style4' => __('Style4', FD_EBP),
-					'style5' => __('Style5', FD_EBP),
-					'style6' => __('Style6', FD_EBP),
-					'style7' => __('Style7', FD_EBP),
-					'style8' => __('Style8', FD_EBP),
+					'style1' => __('Style1', 'fd-elementor-button-plus'),
+					'style2' => __('Style2', 'fd-elementor-button-plus'),
+					'style3' => __('Style3', 'fd-elementor-button-plus'),
+					'style4' => __('Style4', 'fd-elementor-button-plus'),
+					'style5' => __('Style5', 'fd-elementor-button-plus'),
+					'style6' => __('Style6', 'fd-elementor-button-plus'),
+					'style7' => __('Style7', 'fd-elementor-button-plus'),
+					'style8' => __('Style8', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn_option!' => 'adv_btn',
@@ -573,14 +573,14 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add hover style control for push Style layout.
             'fd_dual_btn2_style_push',
 			[
-				'label' => __('Hover Style', FD_EBP),
+				'label' => __('Hover Style', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style1',
 				'options' => [
-					'style1' => __('Style1', FD_EBP),
-					'style2' => __('Style2', FD_EBP),
-					'style3' => __('Style3', FD_EBP),
-					'style4' => __('Style4', FD_EBP),
+					'style1' => __('Style1', 'fd-elementor-button-plus'),
+					'style2' => __('Style2', 'fd-elementor-button-plus'),
+					'style3' => __('Style3', 'fd-elementor-button-plus'),
+					'style4' => __('Style4', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn_option!' => 'adv_btn',
@@ -592,14 +592,14 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add hover style control for push Style layout.
             'fd_dual_btn2_style_slide', 
 			[
-				'label' => __('Hover Style', FD_EBP),
+				'label' => __('Hover Style', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style1',
 				'options' => [
-					'style1' => __('Style1', FD_EBP),
-					'style2' => __('Style2', FD_EBP),
-					'style3' => __('Style3', FD_EBP),
-					'style4' => __('Style4', FD_EBP),
+					'style1' => __('Style1', 'fd-elementor-button-plus'),
+					'style2' => __('Style2', 'fd-elementor-button-plus'),
+					'style3' => __('Style3', 'fd-elementor-button-plus'),
+					'style4' => __('Style4', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn_option!' => 'adv_btn',
@@ -611,14 +611,14 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add hover style control for push Style layout.
             'fd_dual_btn2_style_swipe', 
 			[
-				'label' => __('Hover Style', FD_EBP),
+				'label' => __('Hover Style', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style1',
 				'options' => [
-					'style1' => __('Style1', FD_EBP),
-					'style2' => __('Style2', FD_EBP),
-					'style3' => __('Style3', FD_EBP),
-					'style4' => __('Style4', FD_EBP),
+					'style1' => __('Style1', 'fd-elementor-button-plus'),
+					'style2' => __('Style2', 'fd-elementor-button-plus'),
+					'style3' => __('Style3', 'fd-elementor-button-plus'),
+					'style4' => __('Style4', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn_option!' => 'adv_btn',
@@ -630,17 +630,17 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control to edit title for button2.
             'fd_adv_btn2_text', 
 			[
-				'label' => __('Text', FD_EBP),
+				'label' => __('Text', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::TEXT,
-				'default' => __('Button2 Text', FD_EBP),
-				'placeholder' => __('Button2 Text', FD_EBP),
+				'default' => __('Button2 Text', 'fd-elementor-button-plus'),
+				'placeholder' => __('Button2 Text', 'fd-elementor-button-plus'),
             ]
         );
 
         $this->add_control(//Add control to set link for button2.
             'fd_adv_btn2_link',
 			[
-				'label' => __('Link', FD_EBP),
+				'label' => __('Link', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::URL,
 				'placeholder' => 'http://your-link.com',
 				'default' => [
@@ -652,12 +652,12 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
 		$this->add_control(			//Add select control for Button2 Link Rel Type.
 			'fd_adv_btn2_link_type',
 			[
-				'label' => __( 'Link Type', 'FD_EAW' ),
+				'label' => __( 'Link Type', 'fd-elementor-button-plus' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'dofollow',
 				'options' => [
-					'dofollow' => __( 'DoFollow', 'FD_EAW' ),
-					'nofollow' => __( 'NoFollow', 'FD_EAW' ),
+					'dofollow' => __( 'DoFollow', 'fd-elementor-button-plus' ),
+					'nofollow' => __( 'NoFollow', 'fd-elementor-button-plus' ),
 				],
 			]
 		);
@@ -665,7 +665,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control to select an icon for button2.
             'fd_adv_btn2_icon', 			
 			[
-				'label' => __('Icon', FD_EBP),
+				'label' => __('Icon', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
@@ -679,12 +679,12 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control for button2 icon position.
             'fd_adv_btn2_icon_align',
 			[
-				'label' => __('Icon Position', FD_EBP),
+				'label' => __('Icon Position', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'left',
 				'options' => [
-					'left' => __('Before', FD_EBP),
-					'right' => __('After', FD_EBP),
+					'left' => __('Before', 'fd-elementor-button-plus'),
+					'right' => __('After', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn2_icon!' => '',
@@ -695,7 +695,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control for button1 icon spacing.
             'fd_adv_btn2_icon_indent',
 			[
-				'label' => __('Icon Spacing', FD_EBP),
+				'label' => __('Icon Spacing', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -715,12 +715,12 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control for add tips when hover on button.
             'fd_adv_btn2_tooltip', 
 			[
-				'label' => __('Tooltip', FD_EBP),
+				'label' => __('Tooltip', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'no',
 				'options' => [
-					'yes' => __('Yes', FD_EBP),
-					'no' => __('No', FD_EBP),
+					'yes' => __('Yes', 'fd-elementor-button-plus'),
+					'no' => __('No', 'fd-elementor-button-plus'),
 				],
             ]
         );
@@ -728,10 +728,10 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control for add tooltips text for button2.
             'fd_btn2_tooltip_text', 
 			[
-				'label' => __('Text', FD_EBP),
+				'label' => __('Text', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::TEXT,
-				'default' => __('Tooltip Text', FD_EBP),
-				'placeholder' => __('Tooltip Text', FD_EBP),
+				'default' => __('Tooltip Text', 'fd-elementor-button-plus'),
+				'placeholder' => __('Tooltip Text', 'fd-elementor-button-plus'),
 				'condition' => [
 					'fd_adv_btn2_tooltip' => 'yes',
 				],
@@ -741,16 +741,16 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control for add tooltips position for button2.
             'fd_btn2_tooltip_position',
 			[
-				'label' => __('Position', FD_EBP),
+				'label' => __('Position', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'top',
 				'options' => [
-					'top' => __('Top', FD_EBP),
-					'top_left' => __('Top Left', FD_EBP),
-					'top_right' => __('Top right', FD_EBP),
-					'bottom' => __('Bottom', FD_EBP),
-					'bottom_left' => __('Bottom Left', FD_EBP),
-					'bottom_right' => __('Bottom Right', FD_EBP),
+					'top' => __('Top', 'fd-elementor-button-plus'),
+					'top_left' => __('Top Left', 'fd-elementor-button-plus'),
+					'top_right' => __('Top right', 'fd-elementor-button-plus'),
+					'bottom' => __('Bottom', 'fd-elementor-button-plus'),
+					'bottom_left' => __('Bottom Left', 'fd-elementor-button-plus'),
+					'bottom_right' => __('Bottom Right', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn2_tooltip' => 'yes',
@@ -762,7 +762,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->start_controls_section(//Strats Style section control for button1.
             'fd_adv_btn1_section_style',
 			[
-				'label' => __('Button', FD_EBP),
+				'label' => __('Button', 'fd-elementor-button-plus'),
 				'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -771,7 +771,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
             Group_Control_Border::get_type(),
 			[
 				'name' => 'fd_adv_btn1',
-				'label' => __('Border', FD_EBP),
+				'label' => __('Border', 'fd-elementor-button-plus'),
 				'placeholder' => '1px',
 				'default' => '1px',
 				'selector' => '{{WRAPPER}} .elementor-button',
@@ -785,7 +785,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
             Group_Control_Border::get_type(),
 			[
 				'name' => 'fd_dual_btn1',
-				'label' => __('Border', FD_EBP),
+				'label' => __('Border', 'fd-elementor-button-plus'),
 				'placeholder' => '1px',
 				'default' => '1px',
 				'selector' => '{{WRAPPER}} .dual-button-left',
@@ -798,7 +798,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
             Group_Control_Border::get_type(),
 			[
 				'name' => 'fd_dbwt_btn1',
-				'label' => __('Border', FD_EBP),
+				'label' => __('Border', 'fd-elementor-button-plus'),
 				'placeholder' => '1px',
 				'default' => '1px',
 				'selector' => '{{WRAPPER}} .dbwt-button-left',
@@ -811,7 +811,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add style control for border radius of button1.
             'fd_adv_btn1_border_radius', 
 			[
-				'label' => __('Border Radius', FD_EBP),
+				'label' => __('Border Radius', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', '%'],
 				'selectors' => [
@@ -828,7 +828,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add style control to set padding between text and button1.
             'fd_adv_btn1_text_padding', 
 			[
-				'label' => __('Text Padding', FD_EBP),
+				'label' => __('Text Padding', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', 'em', '%'],
 				'default' => [
@@ -850,7 +850,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add style control to set margin between buttons.
             'fd_adv_btn1_margin', 
 			[
-				'label' => __('Margin', FD_EBP),
+				'label' => __('Margin', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', 'em', '%'],
 				'selectors' => [
@@ -864,11 +864,11 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         );
         $this->start_controls_tabs('button1_tabs');
 
-        $this->start_controls_tab('fd_btn1_normal', ['label' => __('Normal', FD_EBP)]);
+        $this->start_controls_tab('fd_btn1_normal', ['label' => __('Normal', 'fd-elementor-button-plus')]);
         $this->add_control(//Add style control to select text single button.
             'fd_adv_btn1_text_color', 
 			[
-				'label' => __('Text Color', FD_EBP),
+				'label' => __('Text Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-button' => 'color: {{VALUE}};',
@@ -882,7 +882,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add style control to select text color for dual & dbwt button.
             'fd_dual_btn1_text_color',
 			[
-				'label' => __('Text Color', FD_EBP),
+				'label' => __('Text Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .dual-button-left' => 'color: {{VALUE}};',
@@ -898,7 +898,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
             Group_Control_Typography::get_type(),
 			[
 				'name' => 'fd_adv_btn1_typography',
-				'label' => __('Typography', FD_EBP),
+				'label' => __('Typography', 'fd-elementor-button-plus'),
 				'global' => [
 					'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Typography::TYPOGRAPHY_ACCENT,
 				],
@@ -913,7 +913,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
             Group_Control_Typography::get_type(),
 			[
 				'name' => 'fd_dual_btn1_typography',
-				'label' => __('Typography', FD_EBP),
+				'label' => __('Typography', 'fd-elementor-button-plus'),
 				'global' => [
 					'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Typography::TYPOGRAPHY_ACCENT,
 				],
@@ -927,7 +927,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
             Group_Control_Typography::get_type(),
 			[
 				'name' => 'fd_dbwt_btn1_typography',
-				'label' => __('Typography', FD_EBP),
+				'label' => __('Typography', 'fd-elementor-button-plus'),
 				'global' => [
 					'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Typography::TYPOGRAPHY_ACCENT,
 				],
@@ -941,7 +941,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add style control to select color for single button.
             'fd_adv_btn1_background_color',
 			[
-				'label' => __('Background Color', FD_EBP),
+				'label' => __('Background Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'global' => [
 					'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Colors::COLOR_ACCENT,
@@ -957,7 +957,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add style control to select color for dual & dbwt button.
             'fd_dual_btn1_background_color', 
 			[
-				'label' => __('Background Color', FD_EBP),
+				'label' => __('Background Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'global' => [
 					'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Colors::COLOR_ACCENT,
@@ -973,11 +973,11 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         );
         $this->end_controls_tab();
 
-        $this->start_controls_tab('fd_btn1_hover', ['label' => __('Hover', 'elementor-pro')]);
+        $this->start_controls_tab('fd_btn1_hover', ['label' => __('Hover', 'fd-elementor-button-plus')]);
         $this->add_control(//Add control to set text color of single button when hover on it.
             'fd_adv_btn1_hover_color', 
 			[
-				'label' => __('Text Color', FD_EBP),
+				'label' => __('Text Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-button:hover' => 'color: {{VALUE}};',
@@ -990,7 +990,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control to set text color of dual & dbwt button when hover on it.
             'fd_dual_btn1_hover_color',
 			[
-				'label' => __('Text Color', FD_EBP),
+				'label' => __('Text Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .dual-button-left:hover' => 'color: {{VALUE}};',
@@ -1005,7 +1005,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control for background color of single button hover.
             'fd_single_btn_background_hover_color', 
 			[
-				'label' => __('Background Color', FD_EBP),
+				'label' => __('Background Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-button:hover' => 'background-color: {{VALUE}};',
@@ -1019,7 +1019,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control for background color of single button hover.
             'fd_adv_btn1_background_hover_color',
 			[
-				'label' => __('Background Color', FD_EBP),
+				'label' => __('Background Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .single-button-normal.style1:hover .btn-hover' => 'background-color: {{VALUE}};',
@@ -1041,7 +1041,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control for background color of dual button hover.
             'fd_dual_btn_background_hover_color',
 			[
-				'label' => __('Background Color', FD_EBP),
+				'label' => __('Background Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .dual-button-left:hover' => 'background-color: {{VALUE}};',
@@ -1057,7 +1057,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control for background color of dbwt button hover.
             'fd_dual_btn1_background_hover_color',
 			[
-				'label' => __('Background Color', FD_EBP),
+				'label' => __('Background Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .dual-button-normal.style1 .btn-hover' => 'background-color: {{VALUE}};',
@@ -1087,7 +1087,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control to set hover border color of button1.
             'fd_adv_btn1_hover_border_color',
 			[
-				'label' => __('Border Color', FD_EBP),
+				'label' => __('Border Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'condition' => [
 					'fd_adv_btn1_border!' => '',
@@ -1101,7 +1101,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control to set hover border color of button1.
             'fd_dual_btn1_hover_border_color',
 			[
-				'label' => __('Border Color', FD_EBP),
+				'label' => __('Border Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'condition' => [
 					'fd_dual_btn1_border!' => '',
@@ -1115,7 +1115,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control to set hover border color of button1.
             'fd_dbwt_btn1_hover_border_color',
 			[
-				'label' => __('Border Color', FD_EBP),
+				'label' => __('Border Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'condition' => [
 					'fd_dbwt_btn1_border!' => '',
@@ -1130,7 +1130,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//To perforn the animation effect for button1.
             'fd_adv_btn1_hover_animation', 
 			[
-				'label' => __('Animation', FD_EBP),
+				'label' => __('Animation', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::HOVER_ANIMATION,
             ]
         );
@@ -1140,7 +1140,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->start_controls_section(//Strats Style section control for dual button with text for button1.
             'section_fd_dbwt_style',
 			[
-				'label' => __('Text or Icon', FD_EBP),
+				'label' => __('Text or Icon', 'fd-elementor-button-plus'),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'fd_adv_btn_option' => 'dbwt',
@@ -1151,7 +1151,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control to select text color for dual button with text for button1.
             'fd_dbwt_text_color',
 			[
-				'label' => __('Text Color', FD_EBP),
+				'label' => __('Text Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .dbwt-button-text' => 'color: {{VALUE}};',
@@ -1166,19 +1166,19 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control to Font style for Text or Icon in dbwt button.
             'fd_dbwt_text_style', 
 			[
-				'label' => __('Font Style', FD_EBP),
+				'label' => __('Font Style', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'normal',
 				'options' => [
-					'normal' => __('Default', FD_EBP),
-					//'bold' => __( 'Bold', FD_EBP ),
-					'italic' => __('Italic', FD_EBP),
-					'bold_italic' => __('Bold & Italic', FD_EBP),
-					'underline' => __('Underline', FD_EBP),
-					'bold_underline' => __('Bold & Underline', FD_EBP),
-					'overline' => __('Overline', FD_EBP),
-					'bold_overline' => __('Bold & Overline', FD_EBP),
-					'oblique' => __('Oblique', FD_EBP),
+					'normal' => __('Default', 'fd-elementor-button-plus'),
+					//'bold' => __( 'Bold', 'fd-elementor-button-plus' ),
+					'italic' => __('Italic', 'fd-elementor-button-plus'),
+					'bold_italic' => __('Bold & Italic', 'fd-elementor-button-plus'),
+					'underline' => __('Underline', 'fd-elementor-button-plus'),
+					'bold_underline' => __('Bold & Underline', 'fd-elementor-button-plus'),
+					'overline' => __('Overline', 'fd-elementor-button-plus'),
+					'bold_overline' => __('Bold & Overline', 'fd-elementor-button-plus'),
+					'oblique' => __('Oblique', 'fd-elementor-button-plus'),
 				],
 				'condition' => [
 					'fd_adv_btn_option' => 'dbwt',
@@ -1190,7 +1190,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add style control to select background color for dual button with text for button1.
             'fd_dbwt_background_color',
 			[
-				'label' => __('Background Color', FD_EBP),
+				'label' => __('Background Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'global' => [
 					'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Colors::COLOR_ACCENT,
@@ -1209,7 +1209,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
             Group_Control_Border::get_type(),
 			[
 				'name' => 'fd_dbwt_btn_border',
-				'label' => __('Border', FD_EBP),
+				'label' => __('Border', 'fd-elementor-button-plus'),
 				'placeholder' => '1px',
 				'default' => '1px',
 				'selector' => '{{WRAPPER}} .dbwt-button-text',
@@ -1223,7 +1223,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add style control for border radius of button1.
             'fd_dbwt_text_border_radius',
 			[
-				'label' => __('Border Radius', FD_EBP),
+				'label' => __('Border Radius', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', '%'],
 				'selectors' => [
@@ -1239,7 +1239,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control to select icon color for dual button with text for button1.
             'fd_dbwt_icon_color',
 			[
-				'label' => __('Icon Color', FD_EBP),
+				'label' => __('Icon Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .dbwt-btn-icon' => 'color: {{VALUE}};',
@@ -1254,7 +1254,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add style control to select icon background color for dual button with text for button1.
             'fd_dbwt_icon_background_color',
 			[
-				'label' => __('Icon Background Color', FD_EBP),
+				'label' => __('Icon Background Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'global' => [
 					'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Colors::COLOR_ACCENT,
@@ -1273,7 +1273,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
             Group_Control_Border::get_type(),
 			[
 				'name' => 'fd_dbwt_icon_border',
-				'label' => __('Border', FD_EBP),
+				'label' => __('Border', 'fd-elementor-button-plus'),
 				'placeholder' => '1px',
 				'default' => '1px',
 				'selector' => '{{WRAPPER}} .dbwt-btn-icon',
@@ -1286,7 +1286,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add style control for border radius of button1.
             'fd_dbwt_icon_border_radius', 
 			[
-				'label' => __('Border Radius', FD_EBP),
+				'label' => __('Border Radius', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', '%'],
 				'selectors' => [
@@ -1303,7 +1303,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->start_controls_section(//Strats Style section control for button2.
             'fd_adv_btn2_section_style',
 			[
-				'label' => __('Button 2', FD_EBP),
+				'label' => __('Button 2', 'fd-elementor-button-plus'),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'fd_adv_btn_option!' => 'adv_btn',
@@ -1315,7 +1315,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
             Group_Control_Border::get_type(), 
 			[
 				'name' => 'fd_adv_btn2',
-				'label' => __('Border', FD_EBP),
+				'label' => __('Border', 'fd-elementor-button-plus'),
 				'placeholder' => '1px',
 				'default' => '1px',
 				'selector' => '{{WRAPPER}} .dual-button-right',
@@ -1328,7 +1328,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
             Group_Control_Border::get_type(),
 			[
 				'name' => 'fd_dbwt_btn2',
-				'label' => __('Border', FD_EBP),
+				'label' => __('Border', 'fd-elementor-button-plus'),
 				'placeholder' => '1px',
 				'default' => '1px',
 				'selector' => '{{WRAPPER}} .dbwt-button-right',
@@ -1341,7 +1341,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add style control for border radius of button2.
             'fd_adv_btn2_border_radius', 
 			[
-				'label' => __('Border Radius', FD_EBP),
+				'label' => __('Border Radius', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', '%'],
 				'selectors' => [
@@ -1354,7 +1354,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add style control to set padding between icon and text for button1.
             'fd_adv_btn2_text_padding',
 			[
-				'label' => __('Text Padding', FD_EBP),
+				'label' => __('Text Padding', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', 'em', '%'],
 				'default' => [
@@ -1375,7 +1375,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add style control to set margin between buttons.
             'fd_adv_btn2_margin',
 			[
-				'label' => __('Margin', FD_EBP),
+				'label' => __('Margin', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', 'em', '%'],
 				'selectors' => [
@@ -1389,12 +1389,12 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         );
 
         $this->start_controls_tabs('button2_tabs');
-        $this->start_controls_tab('fd_btn2_normal', ['label' => __('Normal', FD_EBP)]);
+        $this->start_controls_tab('fd_btn2_normal', ['label' => __('Normal', 'fd-elementor-button-plus')]);
 
         $this->add_control(//Add control to select text color of button2.
             'fd_adv_btn2_text_color', 
 			[
-				'label' => __('Text Color', FD_EBP),
+				'label' => __('Text Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -1408,7 +1408,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
             Group_Control_Typography::get_type(),
 			[
 				'name' => 'fd_adv_btn2_typography',
-				'label' => __('Typography', FD_EBP),
+				'label' => __('Typography', 'fd-elementor-button-plus'),
 				'global' => [
 					'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Typography::TYPOGRAPHY_ACCENT,
 				],
@@ -1422,7 +1422,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
             Group_Control_Typography::get_type(), 
 			[
 				'name' => 'fd_dual_btn2_typography',
-				'label' => __('Typography', FD_EBP),
+				'label' => __('Typography', 'fd-elementor-button-plus'),
 				'global' => [
 					'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Typography::TYPOGRAPHY_ACCENT,
 				],
@@ -1436,7 +1436,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add style control to select background-color for button2.
             'fd_adv_btn2_background_color',
 			[
-				'label' => __('Background Color', FD_EBP),
+				'label' => __('Background Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'global' => [
 					'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Colors::COLOR_ACCENT,
@@ -1449,11 +1449,11 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         );
         $this->end_controls_tab();
 
-        $this->start_controls_tab('fd_btn2_hover', ['label' => __('Hover', FD_EBP)]);
+        $this->start_controls_tab('fd_btn2_hover', ['label' => __('Hover', 'fd-elementor-button-plus')]);
         $this->add_control(//Add control to set text color of button2 when hover on it.
             'fd_adv_btn2_hover_color',
 			[
-				'label' => __('Text Color', FD_EBP),
+				'label' => __('Text Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .dual-button-right:hover' => 'color: {{VALUE}};',
@@ -1465,7 +1465,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control for background color of button2 hover.
             'fd_adv_btn2_background_hover_color', 
 			[
-				'label' => __('Background Color', FD_EBP),
+				'label' => __('Background Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .dual-button-right:hover' => 'background-color: {{VALUE}};',
@@ -1478,7 +1478,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control to set hover border color of dual & dbwt button.
             'fd_dual_btn2_hover_border_color',
 			[
-				'label' => __('Border Color', FD_EBP),
+				'label' => __('Border Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'condition' => [
 					'fd_adv_btn2_border!' => '',
@@ -1492,7 +1492,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//Add control to set hover border color of dual & dbwt button.
             'fd_dbwt_btn2_hover_border_color',
 			[
-				'label' => __('Border Color', FD_EBP),
+				'label' => __('Border Color', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::COLOR,
 				'condition' => [
 					'fd_dbwt_btn2_border!' => '',
@@ -1507,7 +1507,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_control(//To perforn the animation effect for button2.
             'fd_adv_btn2_hover_animation', 
 			[
-				'label' => __('Hover Animation', FD_EBP),
+				'label' => __('Hover Animation', 'fd-elementor-button-plus'),
 				'type' => Controls_Manager::HOVER_ANIMATION,
             ]
         );
@@ -1814,11 +1814,11 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
                         </span>
                     <?php endif; ?>
                     <span <?php echo $this->get_render_attribute_string('fd-hover'); ?>></span>
-                    <span class="single-button-text"><?php echo $settings['fd_adv_btn1_text']; ?></span>
+                    <span class="single-button-text"><?php echo esc_html($settings['fd_adv_btn1_text']); ?></span>
                 </a>
                 <?php if ($settings['fd_adv_btn1_tooltip'] == 'yes') : ?>
                     <span <?php echo $this->get_render_attribute_string('btn1-tooltip'); ?>>
-                        <?php echo $settings['fd_btn1_tooltip_text']; ?>
+                        <?php echo esc_html($settings['fd_btn1_tooltip_text']); ?>
                     </span>
                 <?php endif; ?>
             </div>
@@ -1833,17 +1833,16 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
                 <div class="btn-left" style="float: left">
                     <a <?php echo $this->get_render_attribute_string('single-button'); ?>>
                         <?php if (!empty($settings['fd_adv_btn1_icon'])) : ?>
-                            <span <?php echo $this->get_render_attribute_string('adv-icon-align1'); ?>>
-                                 
+                            <span <?php echo $this->get_render_attribute_string('adv-icon-align1'); ?>>                               
 								 <?php Icons_Manager::render_icon( $settings['fd_adv_btn1_icon'], [ 'aria-hidden' => 'true' ] ); ?>
                             </span>
                         <?php endif; ?>
                         <span <?php echo $this->get_render_attribute_string('fd-hover'); ?>></span>
-                        <span class="dual-button-text"><?php echo $settings['fd_adv_btn1_text']; ?></span>
+                        <span class="dual-button-text"><?php echo esc_html($settings['fd_adv_btn1_text']); ?></span>
                     </a>
                     <?php if ($settings['fd_adv_btn1_tooltip'] == 'yes') : ?>
                         <span <?php echo $this->get_render_attribute_string('btn1-tooltip'); ?>>
-                            <?php echo $settings['fd_btn1_tooltip_text']; ?>
+                            <?php echo esc_html($settings['fd_btn1_tooltip_text']); ?>
                         </span>
                     <?php endif; ?>
                 </div>
@@ -1855,11 +1854,11 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
                             </span>
                         <?php endif; ?>
                         <span <?php echo $this->get_render_attribute_string('fd-hover'); ?>></span>
-                        <span class="dual-button-text"><?php echo $settings['fd_adv_btn2_text']; ?></span>
+                        <span class="dual-button-text"><?php echo esc_html($settings['fd_adv_btn2_text']); ?></span>
                     </a>
                     <?php if ($settings['fd_adv_btn2_tooltip'] == 'yes') : ?>
-                        <span <?php echo $this->get_render_attribute_string('btn2-tooltip'); ?>>
-                            <?php echo $settings['fd_btn2_tooltip_text']; ?>
+                        <span <?php echo esc_attr($this->get_render_attribute_string('btn2-tooltip')); ?>>
+                            <?php echo esc_html($settings['fd_btn2_tooltip_text']); ?>
                         </span>
                     <?php endif; ?>
                 </div>
@@ -1880,16 +1879,16 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
                             </span>
                         <?php endif; ?>
                         <span <?php echo $this->get_render_attribute_string('fd-hover'); ?>></span>
-                        <span class="dual-button-text"><?php echo $settings['fd_adv_btn1_text']; ?></span>
+                        <span class="dual-button-text"><?php echo esc_html($settings['fd_adv_btn1_text']); ?></span>
                     </a>
                     <?php if ($settings['fd_adv_btn1_tooltip'] == 'yes') : ?>
                         <span <?php echo $this->get_render_attribute_string('btn1-tooltip'); ?>>
-                            <?php echo $settings['fd_btn1_tooltip_text']; ?>
+                            <?php echo esc_html($settings['fd_btn1_tooltip_text']); ?>
                         </span>
                     <?php endif; ?>
 
                     <?php if ($settings['fd_dbwt_btn_option'] == '') { ?>
-                        <span <?php echo $this->get_render_attribute_string('fd-dbwt-text'); ?>><?php echo $settings['fd_dbwt_btn_text']; ?>
+                        <span <?php echo $this->get_render_attribute_string('fd-dbwt-text'); ?>><?php echo esc_html($settings['fd_dbwt_btn_text']); ?>
                         <?php } else { ?>
                             <span class="dbwt-btn-icon">                                
 								<?php Icons_Manager::render_icon( $settings['fd_dbwt_icon'], [ 'aria-hidden' => 'true' ] ); ?>	
@@ -1905,11 +1904,11 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
                             </span>
                         <?php endif; ?>
                         <span <?php echo $this->get_render_attribute_string('fd-hover'); ?>></span>
-                        <span class="dual-button-text"><?php echo $settings['fd_adv_btn2_text']; ?></span>
+                        <span class="dual-button-text"><?php echo esc_html($settings['fd_adv_btn2_text']); ?></span>
                     </a>
                     <?php if ($settings['fd_adv_btn2_tooltip'] == 'yes') : ?>
                         <span <?php echo $this->get_render_attribute_string('btn2-tooltip'); ?>>
-                            <?php echo $settings['fd_btn2_tooltip_text']; ?>
+                            <?php echo esc_html($settings['fd_btn2_tooltip_text']); ?>
                         </span>
                     <?php endif; ?>
                 </div>
