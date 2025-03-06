@@ -1528,6 +1528,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
 
         $this->add_render_attribute('btn1-tooltip', 'class', 'button-tooltip');
         $this->add_render_attribute('btn1-tooltip', 'class', 'tooltip-position-' . $settings['fd_btn1_tooltip_position']);
+		
 
         if (!empty($settings['fd_adv_btn1_link']['url'])) {
             $this->add_render_attribute('single-button', 'href', $settings['fd_adv_btn1_link']['url']);
@@ -1798,6 +1799,8 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         $this->add_render_attribute('adv-icon-align2', 'class', 'elementor-button-icon');
         $this->add_render_attribute('adv-icon-align2', 'class', 'elementor-align-icon-' . $settings['fd_adv_btn2_icon_align']);
 
+		$this->add_render_attribute('fd-hover', 'class', 'btn-hover');
+
         if (!empty($settings['fd_adv_btn2_hover_animation'])) {
             $this->add_render_attribute('dual-button', 'class', 'elementor-animation-' . $settings['fd_adv_btn2_hover_animation']);
         }
@@ -1857,7 +1860,7 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
                         <span class="dual-button-text"><?php echo esc_html($settings['fd_adv_btn2_text']); ?></span>
                     </a>
                     <?php if ($settings['fd_adv_btn2_tooltip'] == 'yes') : ?>
-                        <span <?php echo esc_attr($this->get_render_attribute_string('btn2-tooltip')); ?>>
+                        <span <?php echo $this->get_render_attribute_string('btn2-tooltip'); ?>>
                             <?php echo esc_html($settings['fd_btn2_tooltip_text']); ?>
                         </span>
                     <?php endif; ?>
