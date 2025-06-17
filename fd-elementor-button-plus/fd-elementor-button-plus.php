@@ -4,8 +4,8 @@
  * Description: Additional Styles and Options for elementor Button Widget.
  * Plugin URI: https://flickdevs.com/elementor/elementor-button-plus/
  * Author: FlickDevs
- * Version: 1.3.6
- * Elementor tested up to: 3.27.6
+ * Version: 1.3.7
+ * Elementor tested up to: 3.29.2
  * Author URI: https://www.flickdevs.com/
  *
  * Text Domain: fd-elementor-button-plus
