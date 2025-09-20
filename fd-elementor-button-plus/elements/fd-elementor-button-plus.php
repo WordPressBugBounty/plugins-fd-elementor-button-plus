@@ -1808,19 +1808,19 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
         /* Single Button */
         if ($settings['fd_adv_btn_option'] == 'adv_btn') {
             ?>
-            <div <?php echo $this->get_render_attribute_string('single-wrapper'); ?>>
-                <a <?php echo $this->get_render_attribute_string('single-button'); ?>>
+            <div <?php echo $this->get_render_attribute_string('single-wrapper');  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+                <a <?php echo $this->get_render_attribute_string('single-button');  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	
                     <?php if (!empty($settings['fd_adv_btn1_icon'])) : ?>
-                        <span <?php echo $this->get_render_attribute_string('adv-icon-align1'); ?>>
+                        <span <?php echo $this->get_render_attribute_string('adv-icon-align1'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                            <?php Icons_Manager::render_icon( $settings['fd_adv_btn1_icon'], [ 'aria-hidden' => 'true' ] ); ?>		
                         </span>
                     <?php endif; ?>
-                    <span <?php echo $this->get_render_attribute_string('fd-hover'); ?>></span>
+                    <span <?php echo $this->get_render_attribute_string('fd-hover'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>></span>
                     <span class="single-button-text"><?php echo esc_html($settings['fd_adv_btn1_text']); ?></span>
                 </a>
                 <?php if ($settings['fd_adv_btn1_tooltip'] == 'yes') : ?>
-                    <span <?php echo $this->get_render_attribute_string('btn1-tooltip'); ?>>
+                    <span <?php echo $this->get_render_attribute_string('btn1-tooltip'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                         <?php echo esc_html($settings['fd_btn1_tooltip_text']); ?>
                     </span>
                 <?php endif; ?>
@@ -1832,35 +1832,35 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
 
         if ($settings['fd_adv_btn_option'] == 'dual_button') {
             ?>
-            <div <?php echo $this->get_render_attribute_string('adv-dual-wrapper'); ?>>
+            <div <?php echo $this->get_render_attribute_string('adv-dual-wrapper'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                 <div class="btn-left" style="float: left">
-                    <a <?php echo $this->get_render_attribute_string('single-button'); ?>>
+                    <a <?php echo $this->get_render_attribute_string('single-button'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                         <?php if (!empty($settings['fd_adv_btn1_icon'])) : ?>
-                            <span <?php echo $this->get_render_attribute_string('adv-icon-align1'); ?>>                               
+                            <span <?php echo $this->get_render_attribute_string('adv-icon-align1'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>                               
 								 <?php Icons_Manager::render_icon( $settings['fd_adv_btn1_icon'], [ 'aria-hidden' => 'true' ] ); ?>
                             </span>
                         <?php endif; ?>
-                        <span <?php echo $this->get_render_attribute_string('fd-hover'); ?>></span>
+                        <span <?php echo $this->get_render_attribute_string('fd-hover'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>></span>
                         <span class="dual-button-text"><?php echo esc_html($settings['fd_adv_btn1_text']); ?></span>
                     </a>
                     <?php if ($settings['fd_adv_btn1_tooltip'] == 'yes') : ?>
-                        <span <?php echo $this->get_render_attribute_string('btn1-tooltip'); ?>>
+                        <span <?php echo $this->get_render_attribute_string('btn1-tooltip'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                             <?php echo esc_html($settings['fd_btn1_tooltip_text']); ?>
                         </span>
                     <?php endif; ?>
                 </div>
                 <div class="btn-right" style="float: right">
-                    <a <?php echo $this->get_render_attribute_string('dual-button'); ?>>
+                    <a <?php echo $this->get_render_attribute_string('dual-button'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                         <?php if (!empty($settings['fd_adv_btn2_icon'])) : ?>
-                            <span <?php echo $this->get_render_attribute_string('adv-icon-align2'); ?>>
+                            <span <?php echo $this->get_render_attribute_string('adv-icon-align2'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                                <?php Icons_Manager::render_icon( $settings['fd_adv_btn2_icon'], [ 'aria-hidden' => 'true' ] ); ?>
                             </span>
                         <?php endif; ?>
-                        <span <?php echo $this->get_render_attribute_string('fd-hover'); ?>></span>
+                        <span <?php echo $this->get_render_attribute_string('fd-hover'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>></span>
                         <span class="dual-button-text"><?php echo esc_html($settings['fd_adv_btn2_text']); ?></span>
                     </a>
                     <?php if ($settings['fd_adv_btn2_tooltip'] == 'yes') : ?>
-                        <span <?php echo $this->get_render_attribute_string('btn2-tooltip'); ?>>
+                        <span <?php echo $this->get_render_attribute_string('btn2-tooltip'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                             <?php echo esc_html($settings['fd_btn2_tooltip_text']); ?>
                         </span>
                     <?php endif; ?>
@@ -1873,25 +1873,25 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
 
         if ($settings['fd_adv_btn_option'] == 'dbwt') {
             ?>
-            <div <?php echo $this->get_render_attribute_string('adv-dbwt-wrapper'); ?>>
+            <div <?php echo $this->get_render_attribute_string('adv-dbwt-wrapper'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                 <div class="btn-left" style="float: left">
-                    <a <?php echo $this->get_render_attribute_string('single-button'); ?>>
+                    <a <?php echo $this->get_render_attribute_string('single-button'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                         <?php if (!empty($settings['fd_adv_btn1_icon'])) : ?>
-                            <span <?php echo $this->get_render_attribute_string('adv-icon-align1'); ?>>
+                            <span <?php echo $this->get_render_attribute_string('adv-icon-align1'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                                  <?php Icons_Manager::render_icon( $settings['fd_adv_btn1_icon'], [ 'aria-hidden' => 'true' ] ); ?>		
                             </span>
                         <?php endif; ?>
-                        <span <?php echo $this->get_render_attribute_string('fd-hover'); ?>></span>
+                        <span <?php echo $this->get_render_attribute_string('fd-hover'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>></span>
                         <span class="dual-button-text"><?php echo esc_html($settings['fd_adv_btn1_text']); ?></span>
                     </a>
                     <?php if ($settings['fd_adv_btn1_tooltip'] == 'yes') : ?>
-                        <span <?php echo $this->get_render_attribute_string('btn1-tooltip'); ?>>
+                        <span <?php echo $this->get_render_attribute_string('btn1-tooltip'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                             <?php echo esc_html($settings['fd_btn1_tooltip_text']); ?>
                         </span>
                     <?php endif; ?>
 
                     <?php if ($settings['fd_dbwt_btn_option'] == '') { ?>
-                        <span <?php echo $this->get_render_attribute_string('fd-dbwt-text'); ?>><?php echo esc_html($settings['fd_dbwt_btn_text']); ?>
+                        <span <?php echo $this->get_render_attribute_string('fd-dbwt-text'); ?>><?php echo esc_html($settings['fd_dbwt_btn_text']); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                         <?php } else { ?>
                             <span class="dbwt-btn-icon">                                
 								<?php Icons_Manager::render_icon( $settings['fd_dbwt_icon'], [ 'aria-hidden' => 'true' ] ); ?>	
@@ -1900,17 +1900,17 @@ class Widget_FD_Elementor_Button_plus extends Widget_Base {
                     </span>
                 </div>
                 <div class="btn-right" style="float: right">
-                    <a <?php echo $this->get_render_attribute_string('dual-button'); ?>>
+                    <a <?php echo $this->get_render_attribute_string('dual-button'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                         <?php if (!empty($settings['fd_adv_btn2_icon'])) : ?>
-                            <span <?php echo $this->get_render_attribute_string('adv-icon-align2'); ?>>
+                            <span <?php echo $this->get_render_attribute_string('adv-icon-align2'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                                <?php Icons_Manager::render_icon( $settings['fd_adv_btn2_icon'], [ 'aria-hidden' => 'true' ] ); ?>
                             </span>
                         <?php endif; ?>
-                        <span <?php echo $this->get_render_attribute_string('fd-hover'); ?>></span>
+                        <span <?php echo $this->get_render_attribute_string('fd-hover'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>></span>
                         <span class="dual-button-text"><?php echo esc_html($settings['fd_adv_btn2_text']); ?></span>
                     </a>
                     <?php if ($settings['fd_adv_btn2_tooltip'] == 'yes') : ?>
-                        <span <?php echo $this->get_render_attribute_string('btn2-tooltip'); ?>>
+                        <span <?php echo $this->get_render_attribute_string('btn2-tooltip'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                             <?php echo esc_html($settings['fd_btn2_tooltip_text']); ?>
                         </span>
                     <?php endif; ?>

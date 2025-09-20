@@ -1,14 +1,16 @@
 <?php
 /**
- * Plugin Name: Elementor Button Plus
+ * Plugin Name: Button Plus for Elementor
  * Description: Additional Styles and Options for elementor Button Widget.
  * Plugin URI: https://flickdevs.com/elementor/elementor-button-plus/
  * Author: FlickDevs
- * Version: 1.3.7
- * Elementor tested up to: 3.29.2
+ * Version: 1.3.8
+ * Elementor tested up to: 3.32.2
  * Author URI: https://www.flickdevs.com/
  *
  * Text Domain: fd-elementor-button-plus
+ * License: GPLv2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
@@ -37,7 +39,7 @@ add_action('elementor/widgets/register', 'fd_ele_btn_plus_element');
  */
 function fd_ele_btn_plus_script() {
 	$suffix='';
-    wp_enqueue_style('fd-btn-plus', ELEMENTOR_ADVANCED_BUTTON_URL . 'assets/css/fd-elementor-btn-plus.css', true);
+    wp_enqueue_style('fd-btn-plus', ELEMENTOR_ADVANCED_BUTTON_URL . 'assets/css/fd-elementor-btn-plus.css', array(),'1.0.0');
 	wp_enqueue_style(
 			'font-awesome',
 			ELEMENTOR_ASSETS_URL . 'lib/font-awesome/css/font-awesome' . $suffix . '.css',
@@ -54,7 +56,7 @@ add_action('wp_enqueue_scripts', 'fd_ele_btn_plus_script');
  *   Check the elementor current version.
  */
 function fd_ele_btn_plus_elementor_load_plugin() {
-    load_plugin_textdomain('FD_EBP');
+   // load_plugin_textdomain('FD_EBP');
     if (!did_action('elementor/loaded')) {
         add_action('admin_notices', 'fd_ele_btn_plus_widgets_fail_load');
         return;
