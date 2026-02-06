@@ -4,8 +4,8 @@
  * Description: Additional Styles and Options for elementor Button Widget.
  * Plugin URI: https://flickdevs.com/elementor/elementor-button-plus/
  * Author: FlickDevs
- * Version: 1.3.8
- * Elementor tested up to: 3.32.2
+ * Version: 1.3.9
+ * Elementor tested up to: 3.33.4
  * Author URI: https://www.flickdevs.com/
  *
  * Text Domain: fd-elementor-button-plus
@@ -27,6 +27,7 @@ require_once ELEMENTOR_ADVANCED_BUTTON_PATH . 'inc/elementor-helper.php';
  * @since 1.0.0
  *
  */
+// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
 function fd_ele_btn_plus_element() {
     require_once ELEMENTOR_ADVANCED_BUTTON_PATH . 'elements/fd-elementor-button-plus.php';
 }
@@ -37,6 +38,7 @@ add_action('elementor/widgets/register', 'fd_ele_btn_plus_element');
  * Define Elementor Button Plus element styles.
  * @since 1.0.0
  */
+// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
 function fd_ele_btn_plus_script() {
 	$suffix='';
     wp_enqueue_style('fd-btn-plus', ELEMENTOR_ADVANCED_BUTTON_URL . 'assets/css/fd-elementor-btn-plus.css', array(),'1.0.0');
@@ -55,6 +57,8 @@ add_action('wp_enqueue_scripts', 'fd_ele_btn_plus_script');
 /**
  *   Check the elementor current version.
  */
+
+// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
 function fd_ele_btn_plus_elementor_load_plugin() {
    // load_plugin_textdomain('FD_EBP');
     if (!did_action('elementor/loaded')) {
@@ -72,6 +76,8 @@ add_action('plugins_loaded', 'fd_ele_btn_plus_elementor_load_plugin');
 /**
  * Display admin notice about the plugin is not activated.
  */
+
+// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
 function fd_ele_btn_plus_widgets_fail_load() {
     $screen = get_current_screen();
     if (isset($screen->parent_file) && 'plugins.php' === $screen->parent_file && 'update' === $screen->id) {
@@ -101,6 +107,8 @@ function fd_ele_btn_plus_widgets_fail_load() {
 /**
  * Display admin notice about the plugin is update elementor.
  */
+
+// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
 function fd_btn_plus_elementor_fail_load_out_of_date() {
     if (!current_user_can('update_plugins')) {
         return;
@@ -113,6 +121,7 @@ function fd_btn_plus_elementor_fail_load_out_of_date() {
 }
 
 if (!function_exists('_is_elementor_installed')) {
+	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
     function _is_elementor_installed() {
         $file_path = 'elementor/elementor.php';
         $installed_plugins = get_plugins();
@@ -125,6 +134,7 @@ if (!function_exists('_is_elementor_installed')) {
  * Display admin notice on plugin activation about button plus review
  */
 register_activation_hook(__FILE__, 'fd_btn_plus_plugin_activation');
+// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
 function fd_btn_plus_plugin_activation() {
     $notices = get_option('button_plus_deferred_admin_notices', array());
     $notices[] = '<strong>Hi there! You have been using Elementor Button Plus on your site, I hope its been useful. If you are enjoying my plugin, would you mind rating it 5-star to help spread the word? It want take more than a minute. </strong><p><a href="https://wordpress.org/plugins/fd-elementor-button-plus/advanced/" target="_blank" class="rating-link"><strong> Yes, you deserv it </strong></a></p>';
@@ -132,6 +142,7 @@ function fd_btn_plus_plugin_activation() {
 }
 
 add_action('admin_notices','fd_btn_plus_user_review');
+// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
 function fd_btn_plus_user_review() {
     if ($notices = get_option('button_plus_deferred_admin_notices')) {
         foreach ($notices as $notice) {

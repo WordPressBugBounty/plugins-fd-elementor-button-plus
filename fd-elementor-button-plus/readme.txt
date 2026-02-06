@@ -1,9 +1,9 @@
 === Button Plus for Elementor ===
 Contributors: flickdevs, shaikhaezaz80
 Requires at least: 5.9
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 7.0
-Stable tag: 1.3.8
+Stable tag: 1.3.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,10 @@ Feel free to <a href="https://flickdevs.com/contact-us/" target="_blank">contact
 
 
 == Changelog ==
+
+
+= 1.3.9 =
+Compatibility with latest Elementor plugin and latest WordPress
 
 = 1.3.8 =
 Fixed security warnings
